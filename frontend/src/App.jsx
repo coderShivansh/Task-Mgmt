@@ -6,6 +6,8 @@ import ImpTasks from './pages/ImpTasks'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import IncompletedTasks from './pages/IncompletedTasks'
 import CompleteTasks from './pages/CompleteTasks'
+import Signup from './pages/Signup'
+import Login from './pages/Login'
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
               <Route path='/incompletedTasks' element={<IncompletedTasks /> }/>
 
           </Route>
+          <Route path='/signup' element={<Signup />}></Route>
+          <Route path='/login' element={<Login />}></Route>
         </Routes>
       </Router>
     </div>

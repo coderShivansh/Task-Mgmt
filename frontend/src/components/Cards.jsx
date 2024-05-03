@@ -4,7 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { MdAddCircle } from "react-icons/md";
 
-const Cards = ( {home} ) => {
+const Cards = ( {home, setInputDiv} ) => {
     const data = [
         {
             title: "React is a good framework",
@@ -60,11 +60,12 @@ const Cards = ( {home} ) => {
         </div>
             
             ))}
-        {home === "true" && (<div className='flex flex-col justify-center items-center bg-gray-800 rounded-xl p-4 text-gray-300 hover:scale-105 hover:cursor-pointer transition-all duration-100'>
+        {home === "true" && (
+        <button className='flex flex-col justify-center items-center bg-gray-800 rounded-xl p-4 text-gray-300 hover:scale-105 hover:cursor-pointer transition-all duration-100' onClick={() => setInputDiv("fixed")}>
             <MdAddCircle className='text-4xl'/>
 
              <h2 className='text-2xl mt-2 '>Add Task</h2>
-        </div>)}
+        </button>)}
 
       
     </div>
